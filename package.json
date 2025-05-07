@@ -1,7 +1,7 @@
 {
   "name": "backnosql",
   "version": "1.0.0",
-  "description": "",
+  "description": "Este projecto es un backend de NoSQL",
   "main": "app.js",
   "type":"module",
   "scripts": {
@@ -12,9 +12,9 @@
     "type": "git",
     "url": "git+https://github.com/rickyroses/BackNoSQL.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["NoSQL", "Express", "Backend", "Software"],
+  "author": "Ricardo Leon",
+  "license": "ISC, MIT",
 
   "bugs": {
     "url": "https://github.com/rickyroses/BackNoSQL/issues"
