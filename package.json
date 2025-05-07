@@ -3,19 +3,23 @@
   "version": "1.0.0",
   "description": "Este projecto es un backend de NoSQL",
   "main": "app.js",
-  "type":"module",
+  "type": "module",
   "scripts": {
-    "start":"node app.js",
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rickyroses/BackNoSQL.git"
   },
-  "keywords": ["NoSQL", "Express", "Backend", "Software"],
+  "keywords": [
+    "NoSQL",
+    "Express",
+    "Backend",
+    "Software"
+  ],
   "author": "Ricardo Leon",
   "license": "ISC, MIT",
-
   "bugs": {
     "url": "https://github.com/rickyroses/BackNoSQL/issues"
   },
@@ -23,7 +27,7 @@
   "dependencies": {
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
-    "mogoose": "^0.0.1-security"
+    "mongoose": "^8.14.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
