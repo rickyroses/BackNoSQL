@@ -4,6 +4,8 @@ import { port } from './src/config/constants.js';
 import { uri } from './src/config/constants.js';
 import healthCheckRoutes from './src/routes/healthCheckRoutes.js';
 import userRoutes from './src/routes/userRoutes.js';
+import authRoutes from './src/routes/authRoutes.js'
+
 
 connectDB();
 
@@ -16,6 +18,9 @@ app.use(uri, healthCheckRoutes); // TODO: hacer ruta a mi endpoint de prueba
 
 // http://localhost:5001/api/v0/users
 app.use(`${uri}/users`, userRoutes); 
+
+//http://localhost:5001/api/v0/auth
+app.use(`${uri}/auth`, authRoutes);
 
 // TODO: hacer ruta a mi endpoint de prueba
 

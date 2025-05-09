@@ -4,7 +4,7 @@ import User from "../models/Users.js";
 // Logica (1) Recuperar todos los posts de mongo con el modelo Post
 export const getAllPosts = async (req, res) => {
     try {
-        const posts = await User.find();
+        const posts = await Post.find();
         res.status(200).json(posts);
     } catch (error) {
         res.status(500).json(
