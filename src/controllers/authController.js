@@ -1,6 +1,7 @@
 import User from "../models/Users.js";
 import jwt from "jsonwebtoken";
 import { keyToken } from "../config/constants.js";
+import bcrypt from "bcryptjs";
 
 
 const generateToken = (user) => {
@@ -35,7 +36,23 @@ export const registerUser = async (req, res) => {
         };
 };
 
+// Logica (2) nos logeamos a nuestra app
+export const authenticateUser = async (req, res) => {
+    const {email, password} = req.body;
+    const user = await User.findOne({email})
 
+    console.log("USUARIO: "+user)
+    console.log(`Contrasena: ${password}`)
+    console.log (`y Contrasena Cifrada guardada en DB: ${user.password}`)
 
+    if (user && (await bcrypt.compare(password, user.password))) {
+        res.json({
+            _id: user._id,
+            name: user.name,
+            tokenAccess: generateToken(user._id),
+        });
+    } else {
+        res.status(400).json({message: 'Invalid email or password'});
+    }
 
-    
+}

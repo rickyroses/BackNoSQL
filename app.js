@@ -4,7 +4,8 @@ import { port } from './src/config/constants.js';
 import { uri } from './src/config/constants.js';
 import healthCheckRoutes from './src/routes/healthCheckRoutes.js';
 import userRoutes from './src/routes/userRoutes.js';
-import authRoutes from './src/routes/authRoutes.js'
+import authRoutes from './src/routes/authRoutes.js';
+import { generalErrorHandler, celebrateErrorHandler } from './src/middlewares/errorMiddleware.js';
 
 
 connectDB();
